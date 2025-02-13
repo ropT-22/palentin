@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadiah Coklat</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffcccb;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            text-align: center;
+        }
+        .chocolate-box {
+            width: 150px;
+            height: 150px;
+            background: #8B4513;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .chocolate-box:hover {
+            transform: scale(1.1);
+        }
+        .ribbon {
+            width: 100%;
+            height: 20px;
+            background: red;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .chocolate-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 24px;
+            color: #5D4037;
+        }
+        .chocolate-image {
+            display: none;
+            margin-top: 20px;
+            width: 200px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2></h2>
+    <div class="chocolate-box" onclick="openChocolate()">
+        <div class="ribbon">klik</div>
+    </div>
+    <p class="chocolate-message" id="chocolate-message">TAPIII BOONGGGG❤️</p>
+    <img id="chocolate-image" class="chocolate-image" src="kikuk.jpg" alt="hiiii">
+    <audio id="chocolateSound" src="https://www.myinstants.com/media/sounds/tada-fanfare-a.mp3"></audio>
+    <br>
+    <button onclick="goBack()">kembali lee</button>
+    <script>
+        function openChocolate() {
+            document.getElementById("chocolate-message").style.display = "block";
+            document.getElementById("chocolate-image").style.display = "block";
+            document.getElementById("chocolateSound").play();
+        }
+        function goBack() {
+            window.location.href = "valentine.html"; // Mengarahkan kembali ke halaman utama yang benar
+        }
+    </script>
+</body>
+</html>
